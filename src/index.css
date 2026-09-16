@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Master Brand Color Tokens */
+    --bg-deep-space: #FFFFFF;
+    --bg-midnight-navy: #0B111A;
+    --bg-graphite: #111821;
+    --bg-slate: #17212C;
+    --bg-footer: #05070B;
+
+    --text-primary: #F8FAFC;
+    --text-secondary: #E2E8F0;
+    --text-body: #94A3B8;
+    --text-muted: #64748B;
+
+    --accent-azure: #38BDF8;
+    --accent-violet: #8B5CF6;
+
+    --border-default: rgba(148, 163, 184, 0.12);
+    --border-hover: rgba(56, 189, 248, 0.35);
+    --border-active: rgba(56, 189, 248, 0.55);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFFFFF;
+    color: var(--text-primary);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFFFFF;
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Refined Utilities for Master Prompt Alignment */
+
+/* Grid background pattern */
+.bg-tech-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+}
+
+/* Ambient Subtle Lighting (Barely visible, non-neon) */
+.bg-ambient-glow {
+  background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.12), rgba(139, 92, 246, 0.06) 40%, transparent 75%);
+}
+
+.bg-ambient-violet {
+  background: radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.08), transparent 60%);
+}
+
+/* Master Surfaces & Cards */
+.surface-graphite {
+  background-color: #111821;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.surface-graphite:hover {
+  background-color: #17212C;
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.surface-card {
+  background-color: rgba(17, 24, 33, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.surface-card:hover {
+  background-color: rgba(23, 33, 44, 0.95);
+  border-color: rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Navbar Scrolled Glassmorphism */
+.glass-nav-scrolled {
+  background-color: rgba(7, 10, 15, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+/* Single Signature Brand Gradient Text Highlight */
+.text-gradient-brand {
+  background: linear-gradient(135deg, #38BDF8 0%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070A0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #17212C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38BDF8;
+}
